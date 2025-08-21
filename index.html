@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Prabangi Maserati Ghibli nuoma vestuvėms ir ypatingoms progoms Vilniuje, Kaune ir Rytų Lietuvoje. Stilius, elegancija, išskirtinumas, rafinuotumas. AutoVestuvėms – kai norisi daugiau nei tik automobilio." />
+  <meta name="keywords" content="Maserati Ghibli nuoma, automobilių nuoma vestuvėms, prabangi automobilių nuoma Lietuvoje, automobilis šventei, vestuvių automobilis, Kaunas, Vilnius, Rytų Lietuva, AutoVestuvėms, prabangūs automobiliai vestuvėms, limuzinų nuoma, klasikiniai automobiliai vestuvėms, Maserati nuoma" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.autovestuvems.lt/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.autovestuvems.lt/" />
+  <meta property="og:title" content="AutoVestuvėms – Maserati nuoma šventėms" />
+  <meta property="og:description" content="Išskirtinė Maserati Ghibli nuoma jūsų ypatingai dienai – Vilniuje, Kaune ir Rytų Lietuvoje. Prabanga ir stilius kiekviename kilometre." />
+  <meta property="og:image" content="https://i.postimg.cc/qqFyrPdJ/auto-vestuvems-logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://www.autovestuvems.lt/" />
+  <meta name="twitter:title" content="AutoVestuvėms – Maserati nuoma šventėms" />
+  <meta name="twitter:description" content="Išskirtinė Maserati Ghibli nuoma ypatingoms progoms – vestuvėms, šventėms ir renginiams. Prabanga, kokybė ir elegancija." />
+  <meta name="twitter:image" content="https://i.postimg.cc/qqFyrPdJ/auto-vestuvems-logo.png" />
+  <link rel="icon" href="https://i.postimg.cc/qqFyrPdJ/auto-vestuvems-logo.png" type="image/png" />
+  <title>AutoVestuvėms – Maserati nuoma vestuvėms ir progoms</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Cinzel', serif;
+      color: #e1b248;
+      background: linear-gradient(to bottom, #000000, #1a1200);
+      scroll-behavior: smooth;
+      position: relative;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 20px 0;
+      position: relative;
+    }
+    .logo-container {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+    .logo-container img {
+      width: 70px;
+      height: auto;
+      border-radius: 50%;
+    }
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(-100%);
+      transition: transform 0.5s ease-in-out;
+    }
+    .nav-menu.open {
+      transform: translateX(0);
+    }
+    .nav-menu a {
+      color: #e1b248;
+      text-decoration: none;
+      font-size: 36px;
+      margin: 20px 0;
+      font-family: 'Cinzel', serif;
+      transition: color 0.3s;
+    }
+    .nav-menu a:hover {
+      color: #fff;
+    }
+    h1 {
+      font-size: 52px;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      font-weight: normal;
+      margin: 5px 0 40px;
+    }
+    .intro, .apie-paslauga {
+      text-align: center;
+      padding: 0 20px 40px;
+      font-family: 'Montserrat', sans-serif;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    .tarifai {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;
+    }
+    .tarifas {
+      border: 2px solid #e1b248;
+      border-radius: 10px;
+      padding: 20px;
+      width: 280px;
+      text-align: center;
+      background-color: rgba(17, 17, 17, 0.8);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .tarifas:hover {
+      transform: scale(1.05);
+    }
+    .tarifas img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .kainos-lentele {
+      margin: 20px auto;
+      width: 90%;
+      max-width: 400px;
+      background-color: rgba(17, 17, 17, 0.8);
+      border: 2px solid #e1b248;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .kainos-lentele table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      color: #e1b248;
+    }
+    .kainos-lentele th, .kainos-lentele td {
+      padding: 10px;
+      border-bottom: 1px solid #e1b248;
+      text-align: center;
+    }
+    .akcija {
+      text-align: center;
+      margin-top: 10px;
+      font-family: 'Montserrat', sans-serif;
+      color: #ff4d4d;
+      font-weight: bold;
+    }
+    .forma-uzsakymas {
+      background-color: rgba(17, 17, 17, 0.8);
+      border: 2px solid #e1b248;
+      border-radius: 10px;
+      margin: 40px auto;
+      padding: 30px 20px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+    .forma-uzsakymas h3 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #e1b248;
+    }
+    .forma-uzsakymas input, .forma-uzsakymas select, .forma-uzsakymas button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #e1b248;
+      background-color: transparent;
+      color: #e1b248;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+    .forma-uzsakymas button {
+      background-color: #e1b248;
+      color: #000000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .forma-uzsakymas button:hover {
+      background-color: #d2a03c;
+    }
+    .kontaktai {
+      text-align: center;
+      margin: 40px auto 60px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .kontaktai p {
+      margin: 6px 0;
+      color: #e1b248;
+    }
+    .nuolaida-info {
+      margin-top: -10px;
+      font-size: 14px;
+      color: #e1b248;
+      font-weight: 500;
+    }
+    .blur-logo {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      width: 100px;
+      height: auto;
+      opacity: 0.1;
+      filter: blur(3px);
+      z-index: 0;
+      pointer-events: none;
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('open');
+    }
+
+    function pasirinktiPaslauga(paslauga) {
+      document.getElementById('paslaugos-select').value = paslauga;
+      document.getElementById('forma').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function tikrintiNuolaida() {
+      const dataInput = document.getElementById('data');
+      const valandosInput = document.getElementById('valandos');
+      const nuolaidaInfo = document.getElementById('nuolaida-info');
+      const data = dataInput.value;
+      const valandos = parseFloat(valandosInput.value);
+      if (data && valandos) {
+        const menuo = new Date(data).getMonth() + 1;
+        if (menuo === 5) {
+          nuolaidaInfo.textContent = 'Gegužės mėn. taikoma 25% nuolaida!';
+          nuolaidaInfo.style.display = 'block';
+        } else {
+          nuolaidaInfo.textContent = '';
+          nuolaidaInfo.style.display = 'none';
+        }
+      } else {
+        nuolaidaInfo.textContent = '';
+        nuolaidaInfo.style.display = 'none';
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const selectedCar = urlParams.get('car');
+      if (selectedCar) {
+        pasirinktiPaslauga(selectedCar);
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="logo-container" onclick="toggleMenu()">
+    <img src="https://i.postimg.cc/qqFyrPdJ/auto-vestuvems-logo.png" alt="AutoVestuvėms Logo" />
+  </div>
+
+  <div class="nav-menu" id="navMenu">
+    <a href="index.html" onclick="toggleMenu()">Главная</a>
+    <a href="galerija.html" onclick="toggleMenu()">Галерея</a>
+    <a href="apie-mus.html" onclick="toggleMenu()">О нас</a>
+  </div>
+
+  <header>
+    <h1>DVRIEDAM LUXURY</h1>
+    <h2>Prabanga tavo šventei</h2>
+  </header>
+
+  <section class="tarifai">
+    <div class="tarifas" onclick="pasirinktiPaslauga('MASERATI Ghibli Granlusso 2019')">
+      <img src="https://i.postimg.cc/y870xtG4/IMG-20250411-163742-372.jpg" alt="MASERATI Ghibli Granlusso 2019" />
+      <h3>MASERATI Ghibli Granlusso 2019</h3>
+    </div>
+    <div class="tarifas" onclick="pasirinktiPaslauga('MASERATI Ghibli 2016')">
+      <img src="https://i.postimg.cc/52pLCpcH/IMG-20250411-163814-414.jpg" alt="MASERATI Ghibli 2016" />
+      <h3>MASERATI Ghibli 2016</h3>
+    </div>
+  </section>
+
+  <section class="kainos-lentele">
+    <table>
+      <thead>
+        <tr><th>Automobilis</th><th>Kaina</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>MASERATI Ghibli Granlusso 2019<br><strong>Nuo 4 - 6 val. ~ 105€</strong></td>
+          <td><strong>120€/val.</strong></td>
+        </tr>
+        <tr>
+          <td>MASERATI Ghibli 2016<br><strong>Nuo 4 - 6 val. ~ 90€</strong></td>
+          <td><strong>105€/val.</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="akcija">Akcija – 5%</div>
+  </section>
+
+  <section class="forma-uzsakymas" id="forma">
+    <h3>Užsakymo forma</h3>
+    <form action="https://formspree.io/f/mnndjvaw" method="POST">
+      <input type="text" name="vardas" placeholder="Jūsų vardas" required>
+      <input type="tel" name="telefonas" placeholder="Telefono numeris" required>
+      <select name="paslauga" id="paslaugos-select" required>
+        <option value="">Pasirinkite automobilį</option>
+        <option value="MASERATI Ghibli 2016">MASERATI Ghibli 2016</option>
+        <option value="MASERATI Ghibli Granlusso 2019">MASERATI Ghibli Granlusso 2019</option>
+      </select>
+      <input type="date" name="data" id="data" onchange="tikrintiNuolaida()">
+      <input type="number" name="valandos" id="valandos" placeholder="Valandų skaičius" min="1" onchange="tikrintiNuolaida()">
+      <div class="nuolaida-info" id="nuolaida-info" style="display:none;"></div>
+      <button type="submit">Užsakyti</button>
+    </form>
+  </section>
+
+  <section class="apie-paslauga">
+    <h3>Apie mūsų paslaugas</h3>
+    <p>Automobilių nuoma ypatingoms progoms – Vilniuje, Kaune ir Rytų Lietuvoje. Maserati Ghibli nuoma – išskirtinė patirtis kiekvienam kilometrui. Kai po daugelio metų anūkai vartys jūsų vestuvių albumą, jie matys ne tik elegantišką porą - jie supras, kad pasirinkote stilių. Ne paprastą prabangą, o legendą. Tai - ne kasdienybė, o pasirinkimas, kuriuo kalbate apie save – tyliai, bet išraiškingai.</p>
+  </section>
+
+  <section class="kontaktai">
+    <p><strong>Kontaktai:</strong></p>
+    <p>Tel. +370 65676461</p>
+    <p>El. paštas: autovestuvems@gmail.com</p>
+  </section>
+
+  <img src="https://i.postimg.cc/qqFyrPdJ/auto-vestuvems-logo.png" alt="AutoVestuvėms Logo" class="blur-logo" />
+</body>
+</html>
+
